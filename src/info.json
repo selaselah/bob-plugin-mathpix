@@ -1,0 +1,19 @@
+{
+  "_ref": "https://bobtranslate.com/plugin/quickstart/info.html",
+  "identifier": "dev.chendx.bob-mathpix",
+  "version": "0.0.1",
+  "category": "ocr",
+  "name": "Mathpix 公示识别",
+  "summary": "使用Mathpix API进行公式识别，API需要自行购买",
+  "author": "chendx",
+  "minBobVersiojn": "0.5.0",
+  "options": [
+    {
+      "identifier": "api_key",
+      "type": "text",
+      "defaultValue": "",
+      "title": "API Key",
+      "desc": "Mathpix API密钥，需要从 Mathpix 官网购买启用"
+    }
+  ]
+}
