@@ -2,3 +2,5 @@
 /demo*.png
 /demo*.jpg
 /debug.bobplugin/
+/*.bobplugin
+
