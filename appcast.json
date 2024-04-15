@@ -2,6 +2,12 @@
   "identifier": "dev.chendx.bob-mathpix",
   "versions": [
     {
+      "version": "0.0.2",
+      "desc": "展示结果优化",
+      "sha256": "b789d374035bb02de7d66f91de547299c720b127685aa73c6d4ae472289bd003",
+      "url": "https://github.com/selaselah/bob-plugin-mathpix/releases/download/v0.0.2/bob-plugin-mathpix-0.0.2.bobplugin"
+    },
+    {
       "version": "0.0.1",
       "desc": "初始版本",
       "sha256": "5b8c36fce59f64296035cdbba72658d090af5a1c17c0b303271f2858475b405a",

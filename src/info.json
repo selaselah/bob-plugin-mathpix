@@ -1,7 +1,7 @@
 {
   "_ref": "https://bobtranslate.com/plugin/quickstart/info.html",
   "identifier": "dev.chendx.bob-mathpix",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "category": "ocr",
   "name": "Mathpix 公示识别",
   "summary": "使用Mathpix API进行公式识别，API需要自行购买",
@@ -14,6 +14,23 @@
       "defaultValue": "",
       "title": "API Key",
       "desc": "Mathpix API密钥，需要从 Mathpix 官网购买启用"
+    },
+    {
+      "identifier": "output_style",
+      "title": "Output Style",
+      "type": "menu",
+      "defaultValue": "basic",
+      "menuValues": [
+        {
+          "title": "基础文本",
+          "value": "basic"
+        },
+        {
+          "title": "附加接口信息",
+          "value": "api_info"
+        }
+      ],
+      "desc": "OCR 结果的展示方案"
     }
   ]
 }

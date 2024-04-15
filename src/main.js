@@ -1,7 +1,12 @@
 // 参考了这个：https://github.com/silver-ymz/bob-plugin-latex-ocr/blob/master/src/main.js
 
+function supportLanguages() {
+    return ['auto', 'en'];
+}
+
+
 function ocr(query, completion) {
-  const { api_key } = $option;
+  const { api_key, output_style } = $option;
   const url = 'https://api.mathpix.com/v3/text';
 
   if (!api_key) {
@@ -30,13 +35,16 @@ function ocr(query, completion) {
 
   res.then((resp) => {
     let data = resp.data;
+    texts = []
+    if (output_style == "api_info") {
+      texts.push({ text: 'version: ' + data.version });
+      texts.push({ text: '====latex_styled====' });
+    }
+    texts.push({ text: data.text });
+
     completion({
       result: {
-        texts: [
-          { text: 'version: ' + data.version + '\n' },
-          { text: 'latex_styled: \n' },
-          { text: data.text },
-        ]
+        texts: texts
       }
     });
   })
@@ -50,12 +58,4 @@ function ocr(query, completion) {
   });
 
   return
-
-  completion({
-    result: {
-      texts: [
-        { text: "Hello, World" },
-      ]
-    }
-  });
 }
